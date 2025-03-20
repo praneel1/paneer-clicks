@@ -1,1 +1,4 @@
 @import "tailwindcss";
+hr {
+    border-top: 1px solid #acb1b972;
+}

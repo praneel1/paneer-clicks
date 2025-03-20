@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Photogrid from './components/Photogrid';
+import Photogrid2 from './components/Photogrid2';
 
 const App = () => {
   return (
@@ -9,7 +9,7 @@ const App = () => {
         <h1 className="text-4xl font-bold">Capturing the Unnoticed</h1>
       </header>
 
-      <Photogrid/>
+      <Photogrid2/>
 
       {/* <footer className="bg-gray-900 text-white p-4 text-center">
         <p>© {new Date().getFullYear()} Praneel. All rights reserved.</p>
