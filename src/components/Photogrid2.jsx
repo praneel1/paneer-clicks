@@ -78,7 +78,7 @@ const PhotoGrid = () => {
         <main className="p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {photos.map((src, index) => (
                 <div key={index} className="overflow-hidden rounded-lg shadow-lg shadow-amber-300 bg-yellow-50 flex flex-col">
-                    <img src={src} alt={titles[index]} className="w-full h-85 object-cover" />
+                    <img src={src} alt={titles[index]} className="w-full h-85 object-cover" loading="lazy"/>
                         <h2 className="p-3 text-lg font-semibold text-center">{titles[index]}</h2> 
                     <div className="p-4 pb-auto bg-stone-100 align-self-end">
                         {exifData[index] ? (
