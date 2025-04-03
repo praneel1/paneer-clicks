@@ -46,16 +46,25 @@ const PhotoGrid = () => {
 
     useEffect(() => {
         const loadPhotos = async () => {
-            const files = import.meta.glob('../images/*.{jpg,jpeg,png}');
             const imageArray = [];
+    
+    for (let i = 1; i <= 37; i++) { 
+        const filename = `/images/photo${String(i).padStart(2, "0")}.jpg`;
 
-            for (const path in files) {
-                const module = await files[path]();
-                imageArray.push(module.default);  // Push image URL to array
-            }
+        try {
+            const response = await fetch(filename);
+            if (!response.ok) break;
+            
+            const blob = await response.blob();
+            const blobUrl = URL.createObjectURL(blob);
+            imageArray.push(blobUrl);
+        } catch (error) {
+            console.error(`Error loading image: ${filename}`, error);
+            break;
+        }
+    }
 
-            imageArray.sort();  // Ensure consistent order
-            setPhotos(imageArray);
+    setPhotos(imageArray);
 
             // Extract EXIF metadata for each image
             imageArray.forEach(async (imgSrc, index) => {
