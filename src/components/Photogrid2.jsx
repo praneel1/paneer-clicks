@@ -49,7 +49,7 @@ const PhotoGrid = () => {
             const imageArray = [];
     
     for (let i = 1; i <= 37; i++) { 
-        const filename = `https://your-site.netlify.app/images/photo${String(i).padStart(2, "0")}.jpg`;
+        const filename = `https://paneerclicks.netlify.app/images/photo${String(i).padStart(2, "0")}.jpg`;
 
         try {
             const response = await fetch(filename);
