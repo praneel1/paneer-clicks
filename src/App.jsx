@@ -11,9 +11,9 @@ const App = () => {
 
       <Photogrid2/>
 
-      {/* <footer className="bg-gray-900 text-white p-4 text-center">
+      <footer className="bg-gray-900 text-white p-4 text-center">
         <p>© {new Date().getFullYear()} Praneel. All rights reserved.</p>
-      </footer> */}
+      </footer>
     </div>
   );
 };
